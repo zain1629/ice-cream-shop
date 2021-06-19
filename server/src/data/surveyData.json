@@ -1,0 +1,97 @@
+{
+    "questions": [
+        {
+            "type": "text",
+            "name": "email",
+            "title": "What is your email?"
+        },
+        {
+            "type": "radiogroup",
+            "name": "type",
+            "title": "Which do you prefer?",
+            "isRequired": true,
+            "colCount": 3,
+            "choices": [
+                "Soft-Serve",
+                "Hard (Scooped)",
+                "Frozen Yogurt"
+            ]
+        },
+        {
+            "type": "dropdown",
+            "name": "flavor-soft",
+            "title": "What flavors do you like ?",
+            "isRequired": true,
+            "visibleIf": "{type}='Soft-Serve' || {type}='Frozen Yogurt'",
+            "choices": [
+                "Chocolate",
+                "Vanilla",
+                "Twist"
+               ]
+        },
+        {
+            "type": "dropdown",
+            "name": "flavor-hard",
+            "title": "What flavors do you like ?",
+            "isRequired": true,
+            "visibleIf": "{type}='Hard (Scooped)'",
+            "choices": [
+                "Mc Ribs",
+                "Chocolate",
+                "Vanilla",
+                "Strawberry",
+                "Mint",
+                "Green Tea",
+                "Other"
+               ]
+        },
+        {
+            "type": "text",
+            "name": "other-flavs",
+            "visibleIf": "{flavor-hard}='Other' && {type}='Hard (Scooped)'",
+            "title": "What other flavors do you like?"
+        },
+
+        {
+            "type": "radiogroup",
+            "name": "pref",
+            "title": "Prefered way of eating:",
+            "isRequired": true,
+            "colCount": 2,
+            "choices": [
+                "Cup",
+                "Cone"
+            ]
+        },
+        {
+            "type": "checkbox",
+            "name": "toppings",
+            "title": "Type of order :",
+            "isRequired": true,
+            "choices": [
+                "Hot-Fudge",
+                "Sprinkle",
+                "Dip",
+                "Other"
+               ]
+        },
+        {
+            "type": "radiogroup",
+            "name": "topping-dip",
+            "visibleIf": "{toppings} contains 'Dip'",
+            "title": "Which Dip do you like better?",
+            "isRequired": true,
+            "colCount": 2,
+            "choices": [
+                "Cherry",
+                "Chocolate"
+            ]
+        },
+        {
+            "type": "text",
+            "name": "other-topings",
+            "visibleIf": "{toppings} contains 'Other'",
+            "title": "What other topings do you like?"
+        }
+    ]
+}

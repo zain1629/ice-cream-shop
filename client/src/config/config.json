@@ -1,0 +1,7 @@
+{
+    "dev" : {
+        "User" : "Zain",
+        "API"  : "http://localhost",
+        "PORT" : "5000"
+    }
+}
